@@ -23386,7 +23386,7 @@ var Login = (function (_React$Component) {
           'p',
           null,
           'Hi ',
-          this.props.user.name,
+          this.props.user.username,
           '! '
         ),
         _react2['default'].createElement(
