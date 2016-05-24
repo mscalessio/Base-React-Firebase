@@ -1,0 +1,21 @@
+{
+  "name": "base-react-firebase",
+  "description": "This is the project base for React and Firebase configuration",
+  "main": "server.js",
+  "authors": [
+    "Alessio Masucci"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "skeleton": "^2.0.4"
+  }
+}
