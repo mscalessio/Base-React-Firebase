@@ -18,13 +18,13 @@ export default class Login extends React.Component {
         </p>
       </div>;
   }
-  signin = (evt) => this.sign('in', evt);
-  signup = (evt) => this.sign('up', evt);
+  signin = evt => this.sign('in', evt);
+  signup = evt => this.sign('up', evt);
   sign = (name, evt) => {
     var username = React.findDOMNode(this.refs.username).value,
         password = React.findDOMNode(this.refs.password).value;
 
-    API['sign' + name](username, password).then(data => this.props.setUser);
+    API['sign' + name](username, password).then(data => this.props.setUser(data.user));
   }
   signout = evt => API.signout().then(data => this.props.setUser(null));
 }
