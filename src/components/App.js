@@ -11,7 +11,7 @@ export default class App extends React.Component {
       <div className='row'>
         <div className='three columns'>
           <h1> Base React Firebase</h1>
-          <Login user={this.state.user} />
+        <Login user={this.state.user} setUser={this.setUser} />
           Pagelist
         </div>
         <div className='nine columns'>
@@ -20,4 +20,5 @@ export default class App extends React.Component {
       </div>
     </div>;
   }
+  setUser = (user) => this.setState({ user: user });
 }

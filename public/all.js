@@ -23266,11 +23266,17 @@ var App = (function (_React$Component) {
   _inherits(App, _React$Component);
 
   function App() {
+    var _this = this;
+
     _classCallCheck(this, App);
 
     _get(Object.getPrototypeOf(App.prototype), 'constructor', this).apply(this, arguments);
 
     this.state = { user: USER };
+
+    this.setUser = function (user) {
+      return _this.setState({ user: user });
+    };
   }
 
   _createClass(App, [{
@@ -23290,7 +23296,7 @@ var App = (function (_React$Component) {
               null,
               ' Base React Firebase'
             ),
-            _react2['default'].createElement(_Login2['default'], { user: this.state.user }),
+            _react2['default'].createElement(_Login2['default'], { user: this.state.user, setUser: this.setUser }),
             'Pagelist'
           ),
           _react2['default'].createElement(
@@ -23340,9 +23346,34 @@ var Login = (function (_React$Component) {
   _inherits(Login, _React$Component);
 
   function Login() {
+    var _this = this;
+
     _classCallCheck(this, Login);
 
     _get(Object.getPrototypeOf(Login.prototype), 'constructor', this).apply(this, arguments);
+
+    this.signin = function (evt) {
+      return _this.sign('in', evt);
+    };
+
+    this.signup = function (evt) {
+      return _this.sign('up', evt);
+    };
+
+    this.sign = function (name, evt) {
+      var username = _react2['default'].findDOMNode(_this.refs.username).value,
+          password = _react2['default'].findDOMNode(_this.refs.password).value;
+
+      API['sign' + name](username, password).then(function (data) {
+        return _this.props.setUser;
+      });
+    };
+
+    this.signout = function (evt) {
+      return API.signout().then(function (data) {
+        return _this.props.setUser(null);
+      });
+    };
   }
 
   _createClass(Login, [{
