@@ -19,7 +19,7 @@ router.use(require('express-session')({
   secret: 'oshFlBlA7rbO68ykPv7aolsRMNZkBt5n',
 }));
 
-router.post('/api/sigup', function (req, res) {
+router.post('/api/signup', function (req, res) {
   var username = req.body.username,
       password = req.body.password;
 
