@@ -1,15 +1,18 @@
 import React from 'react';
 import {RouteHandler} from 'react-router';
 
+import Login from './Login';
+
 export default class App extends React.Component {
   state = { user: USER }
 
   render () {
-    return <div>
+    return
+    <div>
       <div className='row'>
         <div className='three columns'>
           <h1> Base React Firebase</h1>
-          Login
+          <Login user={this.state.user} />
           Pagelist
         </div>
         <div className='nine columns'>
