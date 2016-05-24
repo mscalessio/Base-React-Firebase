@@ -35,7 +35,7 @@ router.post('/api/signup', function (req, res) {
       passwordHash: hash(password)
     };
 
-    users.child.username.set(userObj);
+    users.child(username).set(userObj);
     req.session.user = userObj;
 
     res.json({
