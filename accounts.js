@@ -5,7 +5,7 @@ var firebase = new Firebase('https://hello-react-terry.firebaseio.com/');
 var users = firebase.child('users');
 
 function hash(password) {
-  return crypto.createHash('sha512').update(password).digest.('hex');
+  return crypto.createHash('sha512').update(password).digest('hex');
 }
 
 

@@ -7,5 +7,5 @@ const {Route} = Router;
 var routes = <Route handler={App}>
 </Route>;
 
-Router.run(router, Router.HistoryLocation, Root =>
+Router.run(routes, Router.HistoryLocation, Root =>
   React.render(<Root/>, document.getElementById('app')));
