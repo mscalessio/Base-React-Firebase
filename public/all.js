@@ -23276,8 +23276,7 @@ var App = (function (_React$Component) {
   _createClass(App, [{
     key: 'render',
     value: function render() {
-      return;
-      _react2['default'].createElement(
+      return _react2['default'].createElement(
         'div',
         null,
         _react2['default'].createElement(
@@ -23349,8 +23348,7 @@ var Login = (function (_React$Component) {
   _createClass(Login, [{
     key: 'render',
     value: function render() {
-      if (this.props.user) return;
-      _react2['default'].createElement(
+      if (this.props.user) return _react2['default'].createElement(
         'div',
         { className: 'row' },
         _react2['default'].createElement(
@@ -23372,8 +23370,7 @@ var Login = (function (_React$Component) {
         )
       );
 
-      return;
-      _react2['default'].createElement(
+      return _react2['default'].createElement(
         'div',
         { className: 'row' },
         _react2['default'].createElement(

@@ -7,8 +7,7 @@ export default class App extends React.Component {
   state = { user: USER }
 
   render () {
-    return
-    <div>
+    return <div>
       <div className='row'>
         <div className='three columns'>
           <h1> Base React Firebase</h1>
