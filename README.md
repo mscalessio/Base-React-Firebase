@@ -5,3 +5,5 @@ Clone this repo and run:
 $ npm install
 $ bower install
 ```
+
+##Updates
